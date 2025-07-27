@@ -12,7 +12,7 @@ const Navbar = () => {
         console.log("Logout Successfully.");
       })
       .catch((err) => {
-        console.log("Failed to log out.");
+        console.log(err, "Failed to log out.");
       });
   };
 
@@ -25,10 +25,10 @@ const Navbar = () => {
         <NavLink to="/myApplications">My Application</NavLink>
       </li>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/addJob">Add A Job</NavLink>
       </li>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/myPostedJobs">My Posted Jobs</NavLink>
       </li>
     </>
   );
@@ -63,7 +63,7 @@ const Navbar = () => {
         </div>
         <a className="btn btn-ghost text-xl">
           <img src={logo} alt="" />
-          <h3 className="text-3xl">Job Portal</h3>
+          <h3 className="text-3xl font-bold">Job Portal</h3>
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">

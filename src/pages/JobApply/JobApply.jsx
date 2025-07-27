@@ -73,7 +73,7 @@ const JobApply = () => {
                 className="input"
                 placeholder="Resume URL"
               />
-              <button className="btn btn-neutral mt-4">Login</button>
+              <button className="btn btn-neutral mt-4">Apply</button>
             </fieldset>
           </form>
         </div>
