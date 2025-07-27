@@ -1,9 +1,9 @@
-import { h2, p } from "motion/react-client";
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const JobDetails = () => {
   const {
+    _id,
     applicationDeadline,
     category,
     company,
@@ -82,7 +82,9 @@ const JobDetails = () => {
         HR Email
       </h2>
       <p className="mb-4">{hr_email}</p>
-      <div className="btn btn-secondary my-4">Apply Now</div>
+      <Link to={`/jobApply/${_id}`}>
+        <div className="btn btn-secondary my-4">Apply Now</div>
+      </Link>
     </div>
   );
 };
