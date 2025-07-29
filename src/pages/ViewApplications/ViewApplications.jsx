@@ -18,12 +18,14 @@ const ViewApplications = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        Swal.fire({
-          icon: "success",
-          title: "Status has been Updated",
-          showConfirmButton: false,
-          timer: 1500,
-        });
+          if (data.matchedCount) {
+            Swal.fire({
+              icon: "success",
+              title: "Status has been Updated",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
       });
   };
 
